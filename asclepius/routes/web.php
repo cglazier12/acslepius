@@ -26,6 +26,8 @@ Route::get('/our-team', [SiteController::class, 'ourTeam']);
 
 Route::get('/your-story', [SiteController::class, 'yourStory']);
 
+Route::get('/contact', [SiteController::class, 'contact']);
+
 Route::get('/donate', [SiteController::class, 'donate']);
 
 /*

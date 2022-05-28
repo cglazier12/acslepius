@@ -240,6 +240,16 @@ var map = {
 		"./resources/js/Pages/Site/Team.vue",
 		"/js/vendor",
 		"resources_js_Pages_Site_Team_vue"
+	],
+	"./Site/YourStory": [
+		"./resources/js/Pages/Site/YourStory.vue",
+		"/js/vendor",
+		"resources_js_Pages_Site_YourStory_vue"
+	],
+	"./Site/YourStory.vue": [
+		"./resources/js/Pages/Site/YourStory.vue",
+		"/js/vendor",
+		"resources_js_Pages_Site_YourStory_vue"
 	]
 };
 function webpackAsyncContext(req) {
