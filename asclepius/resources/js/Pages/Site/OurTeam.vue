@@ -50,7 +50,11 @@ export default {
         Footer,
         Navbar
     },
-    setup() {
+    props: {
+        people: Object,
+
+    },
+    setup(props) {
         return {
             people,
         }

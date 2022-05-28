@@ -141,6 +141,16 @@ var map = {
 		"/js/vendor",
 		"resources_js_Pages_App_Dashboard_vue"
 	],
+	"./App/Questions": [
+		"./resources/js/Pages/App/Questions.vue",
+		"/js/vendor",
+		"resources_js_Pages_App_Questions_vue"
+	],
+	"./App/Questions.vue": [
+		"./resources/js/Pages/App/Questions.vue",
+		"/js/vendor",
+		"resources_js_Pages_App_Questions_vue"
+	],
 	"./Components/Footer": [
 		"./resources/js/Pages/Components/Footer.vue",
 		"/js/vendor",
@@ -160,6 +170,16 @@ var map = {
 		"./resources/js/Pages/Components/Navbar.vue",
 		"/js/vendor",
 		"resources_js_Pages_Components_Navbar_vue"
+	],
+	"./Components/Sidebar": [
+		"./resources/js/Pages/Components/Sidebar.vue",
+		"/js/vendor",
+		"resources_js_Pages_Components_Sidebar_vue"
+	],
+	"./Components/Sidebar.vue": [
+		"./resources/js/Pages/Components/Sidebar.vue",
+		"/js/vendor",
+		"resources_js_Pages_Components_Sidebar_vue"
 	],
 	"./Site/About": [
 		"./resources/js/Pages/Site/About.vue",

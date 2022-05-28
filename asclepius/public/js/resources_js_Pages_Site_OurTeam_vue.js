@@ -211,7 +211,10 @@ var people = [{
     Footer: _Components_Footer__WEBPACK_IMPORTED_MODULE_1__["default"],
     Navbar: _Components_Navbar__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
-  setup: function setup() {
+  props: {
+    people: Object
+  },
+  setup: function setup(props) {
     return {
       people: people
     };

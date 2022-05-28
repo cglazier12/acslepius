@@ -27,9 +27,4 @@ class SiteController extends Controller
     {
         return Inertia::render('Site/Donate');
     }
-
-    public function team()
-    {
-
-    }
 }
