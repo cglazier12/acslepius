@@ -13,13 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('board_members', function (Blueprint $table) {
+        Schema::create('donations', function (Blueprint $table) {
             $table->id();
-            $table->string('path');
-            $table->string('name');
-            $table->string('title');
-            $table->string('summary');
-            $table->longText('description');
+            $table->foreignId('customer_id');
+            $table->string('stripe_id');
+            $table->boolean('paid')->default(0);
+            $table->decimal('amount', 8, 2);
             $table->timestamps();
         });
     }
@@ -31,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('board_members');
+        Schema::dropIfExists('donations');
     }
 };
