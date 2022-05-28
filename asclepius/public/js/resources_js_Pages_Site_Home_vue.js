@@ -697,7 +697,7 @@ var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "hidden md:flex items-center justify-end md:flex-1 lg:w-0"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-  href: "#",
+  href: "/donate",
   "class": "ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-purple-700 hover:to-indigo-700"
 }, " Donate ")], -1
 /* HOISTED */
@@ -879,7 +879,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         _: 1
         /* STABLE */
 
-      }), _hoisted_16]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(vue__WEBPACK_IMPORTED_MODULE_0__.Transition, {
+      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" ====================  Donate Button Start ==================== "), _hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" =====================  Donate Button End ===================== ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(vue__WEBPACK_IMPORTED_MODULE_0__.Transition, {
         "enter-active-class": "duration-200 ease-out",
         "enter-from-class": "opacity-0 scale-95",
         "enter-to-class": "opacity-100 scale-100",
@@ -958,24 +958,22 @@ var _hoisted_1 = {
   "class": "bg-white"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"relative\"><!--            &lt;div class=&quot;absolute inset-x-0 bottom-0 h-1/2 bg-gray-100&quot; /&gt;--><div class=\"max-w-7xl mx-auto sm:px-6 lg:px-8\"><div class=\"relative shadow-xl sm:rounded-2xl sm:overflow-hidden\"><div class=\"absolute inset-0\"><img class=\"h-full w-full object-cover\" src=\"" + _assets_images_hero_jpg__WEBPACK_IMPORTED_MODULE_1__["default"] + "\" alt=\"People working on laptops\"><div class=\"absolute inset-0 bg-gradient-to-b from-gray-500 to-transparent mix-blend-multiply\"></div></div><div class=\"relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8\"><h1 class=\"text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl\"><span class=\"block text-white\">Take control of your</span><span class=\"block text-indigo-200\">customer support</span></h1><p class=\"mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl\">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p><div class=\"mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center\"><div class=\"space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5\"><a href=\"#\" class=\"flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8\"> Get started </a><a href=\"#\" class=\"flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8\"> Live demo </a></div></div></div></div></div></div>", 1);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"relative\"><!--            &lt;div class=&quot;absolute inset-x-0 bottom-0 h-1/2 bg-gray-100&quot; /&gt;--><div class=\"max-w-7xl mx-auto sm:px-6 lg:px-8\"><div class=\"relative shadow-xl sm:rounded-2xl sm:overflow-hidden\"><div class=\"absolute inset-0\"><img class=\"h-full w-full object-cover\" src=\"" + _assets_images_hero_jpg__WEBPACK_IMPORTED_MODULE_1__["default"] + "\" alt=\"People working on laptops\"><div class=\"absolute inset-0 bg-gradient-to-b from-gray-500 to-transparent mix-blend-multiply\"></div></div><div class=\"relative px-4 py-12 sm:px-6 sm:py-16 lg:py-24 lg:px-8\"><h1 class=\"text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl\"><span class=\"block text-white\">Take control of your</span><span class=\"block text-indigo-200\">customer support</span></h1><p class=\"mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl\">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p><div class=\"mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center\"><div class=\"space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5\"><a href=\"#\" class=\"btn btn-secondary\"> Get started </a><a href=\"#\" class=\"btn btn-primary\"> Live demo </a></div></div></div></div></div></div>", 1);
 
 var _hoisted_3 = {
-  "class": "relative bg-gray-50 py-16"
+  "class": "relative py-16"
 };
 var _hoisted_4 = {
   "class": "relative"
 };
 
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl"
+  "class": "lg:max-w-7xl flex-1 py-8 mx-auto sm:px-6 lg:px-8"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
-  "class": "text-base font-semibold tracking-wider text-cyan-600 uppercase"
-}, "Our Mission"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": "mt-5 mx-auto max-w-prose text-xl text-gray-500"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-  "class": "mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl"
-}, "The Asclepius Initiative: "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Working towards better healthcare coverage for all, so you can get the care you need, when you need it, at an affordable price, hassle-free.")])], -1
+  "class": "font-extrabold text-gray-900 sm:text-3xl"
+}, "Lifetime Membership"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  "class": "mt-6 text-base text-gray-500"
+}, "Lorem ipsum dolor sit amet consect etur adipisicing elit. Itaque amet indis perferendis blanditiis repellendus etur quidem assumenda.")], -1
 /* HOISTED */
 );
 
@@ -1059,7 +1057,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   var _component_Footer = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Footer");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Navbar), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Hero section "), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Blog section "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.blogPosts, function (post) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Navbar), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Hero section "), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Blog section "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                <div class=\"text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <h2 class=\"text-base font-semibold tracking-wider text-cyan-600 uppercase\">Our Mission</h2>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                    <p class=\"mt-5 mx-auto max-w-prose text-xl text-gray-500\"><span class=\"mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl\">The Asclepius Initiative: </span>Working towards better healthcare coverage for all, so you can get the care you need, when you need it, at an affordable price, hassle-free.</p>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                </div>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.blogPosts, function (post) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       key: post.id,
       "class": "flex flex-col rounded-lg shadow-lg overflow-hidden"

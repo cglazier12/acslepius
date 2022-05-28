@@ -30,12 +30,13 @@ class SiteController extends Controller
     public function contact()
     {
 
-        dd('sfdsdf');
         return Inertia::render('Site/Contact');
     }
 
     public function donate()
     {
+
+
         return Inertia::render('Site/Donate');
     }
 }

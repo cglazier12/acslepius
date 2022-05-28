@@ -12,7 +12,7 @@
                         <img class="h-full w-full object-cover" src="../../../assets/images/hero.jpg" alt="People working on laptops" />
                         <div class="absolute inset-0 bg-gradient-to-b from-gray-500 to-transparent mix-blend-multiply" />
                     </div>
-                    <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
+                    <div class="relative px-4 py-12 sm:px-6 sm:py-16 lg:py-24 lg:px-8">
                         <h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
                             <span class="block text-white">Take control of your</span>
                             <span class="block text-indigo-200">customer support</span>
@@ -20,8 +20,8 @@
                         <p class="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
                         <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                             <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-                                <a href="#" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8"> Get started </a>
-                                <a href="#" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"> Live demo </a>
+                                <a href="#" class="btn btn-secondary"> Get started </a>
+                                <a href="#" class="btn btn-primary"> Live demo </a>
                             </div>
                         </div>
                     </div>
@@ -29,13 +29,19 @@
             </div>
         </div>
         <!-- Blog section -->
-        <div class="relative bg-gray-50 py-16">
+        <div class="relative py-16">
             <div class="relative">
-                <div class="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
-                    <h2 class="text-base font-semibold tracking-wider text-cyan-600 uppercase">Our Mission</h2>
 
-                    <p class="mt-5 mx-auto max-w-prose text-xl text-gray-500"><span class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">The Asclepius Initiative: </span>Working towards better healthcare coverage for all, so you can get the care you need, when you need it, at an affordable price, hassle-free.</p>
+                <div class="lg:max-w-7xl flex-1 py-8 mx-auto sm:px-6 lg:px-8">
+                    <h2 class="font-extrabold text-gray-900 sm:text-3xl">Lifetime Membership</h2>
+                    <p class="mt-6 text-base text-gray-500">Lorem ipsum dolor sit amet consect etur adipisicing elit. Itaque amet indis perferendis blanditiis repellendus etur quidem assumenda.</p>
                 </div>
+
+<!--                <div class="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">-->
+<!--                    <h2 class="text-base font-semibold tracking-wider text-cyan-600 uppercase">Our Mission</h2>-->
+
+<!--                    <p class="mt-5 mx-auto max-w-prose text-xl text-gray-500"><span class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">The Asclepius Initiative: </span>Working towards better healthcare coverage for all, so you can get the care you need, when you need it, at an affordable price, hassle-free.</p>-->
+<!--                </div>-->
                 <div class="mt-12 mx-auto max-w-md px-4 grid gap-8 sm:max-w-lg sm:px-6 lg:px-8 lg:grid-cols-3 lg:max-w-7xl">
                     <div v-for="post in blogPosts" :key="post.id" class="flex flex-col rounded-lg shadow-lg overflow-hidden">
                         <div class="flex-shrink-0">

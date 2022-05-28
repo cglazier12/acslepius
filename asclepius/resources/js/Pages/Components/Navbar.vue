@@ -49,9 +49,16 @@
                     <a href="/our-team" class="text-base font-medium text-gray-800 hover:text-gray-900"> Our Team </a>
                     <a href="/your-story" class="text-base font-medium text-gray-800 hover:text-gray-900"> Your Story </a>
                 </PopoverGroup>
+
+                <!-- ====================  Donate Button Start ==================== -->
+
                 <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                    <a href="#" class="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-purple-700 hover:to-indigo-700"> Donate </a>
+                    <a href="/donate" class="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-purple-700 hover:to-indigo-700">
+                        Donate
+                    </a>
                 </div>
+
+                <!-- =====================  Donate Button End ===================== -->
             </div>
 
             <transition enter-active-class="duration-200 ease-out" enter-from-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in" leave-from-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">
