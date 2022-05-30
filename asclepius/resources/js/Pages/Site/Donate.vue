@@ -52,12 +52,36 @@
                             </dl>
                         </div>
                     </div>
-                    <div class="bg-indigo-700 sm:rounded-2xl py-16 px-4 sm:py-24 sm:px-6 lg:bg-none lg:px-0 lg:flex lg:justify-center">
-                        <div class="max-w-lg mx-auto w-full  lg:mx-4 text-white">
-
+                    <div class="h-auto bg-indigo-700 sm:rounded-2xl py-16 px-4 sm:py-24 sm:px-6 lg:bg-none lg:px-0 lg:flex lg:justify-center">
+                        <div class="max-w-lg mx-auto w-full  lg:mx-4 text-white grid gird-cols-1 gap-4">
                                 <h2 class="sr-only">Price</h2>
 
-                                <p class="text-2xl mt-0 font-extrabold sm:text-3xl">Donate</p>
+
+
+<!--                                    Recurring Donation section-->
+                                    <div class="h-full text-white" >
+                                        <p class="text-2xl mt-0 font-extrabold sm:text-3xl">Monthly Donations</p>
+
+                                        <p>Enter in amount to donate each month.</p>
+
+                                        <label for="price" class="block text-sm font-medium">Price</label>
+                                        <div class="mt-1 relative rounded-md shadow-sm">
+                                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                                <span class="text-gray-500 sm:text-lg"> $ </span>
+                                            </div>
+                                            <input v-model.lazy="monthly" v-bind="money" name="price" id="price" class="input pl-8" aria-describedby="price-currency" />
+                                        </div>
+
+
+                                    </div>
+
+<!--                                    One Time Donation section-->
+                                    <div class="h-1/2">
+                                        <p class="text-2xl mt-0 font-extrabold sm:text-3xl">One Time Donation</p>
+
+                                        <input class="input"  />
+                                    </div>
+
 
 
 <!--                                <p class="relative grid grid-cols-2">-->
@@ -100,18 +124,23 @@
 </template>
 
 <script>
+import {ref} from 'vue'
 import Navbar from '../Components/Navbar'
 import { CalendarIcon, CheckIcon, PlusIcon, UsersIcon, ViewBoardsIcon, ViewListIcon } from '@heroicons/vue/outline'
 import Footer from '../Components/Footer'
+
 export default {
     name: "Donate",
 
     components: {
         Navbar,
         Footer,
+
     },
 
     setup(props) {
+
+        const monthly = ref(0.00);
 
         const features = [
             {
@@ -151,6 +180,8 @@ export default {
         return {
             features,
             checklist,
+            money,
+            monthly
         }
     }
 }

@@ -27,9 +27,13 @@
         "@inertiajs/inertia": "^0.11.0",
         "@inertiajs/inertia-vue3": "^0.6.0",
         "@inertiajs/progress": "^0.2.7",
+        "@smartweb/vue-flash-message": "^0.6.10",
         "@tailwindcss/aspect-ratio": "^0.4.0",
         "@tailwindcss/forms": "^0.5.0",
+        "inputmask": "^5.0.7",
+        "v-money": "^0.8.1",
         "vue": "^3.2.31",
+        "vue-the-mask": "^0.11.1",
         "vuedraggable": "^4.1.0"
     }
 }

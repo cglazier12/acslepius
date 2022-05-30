@@ -24,11 +24,16 @@ Route::get('/', [SiteController::class, 'home']);
 
 Route::get('/our-team', [SiteController::class, 'ourTeam']);
 
-Route::get('/your-story', [SiteController::class, 'yourStory']);
+Route::post('/your-story/submit', [SiteController::class, 'submitStory']);
+
+Route::get('/your-story', [SiteController::class, 'yourStory'])->name('yourStory');
+
 
 Route::get('/contact', [SiteController::class, 'contact']);
 
 Route::get('/donate', [SiteController::class, 'donate']);
+
+
 
 /*
  *  Back end routes :: app layout
@@ -38,6 +43,7 @@ Route::prefix('/admin')->name('admin.')->middleware(['auth'])->group(function ()
 
     Route::get('/', [AdminController::class, 'dashboard'])->name('dashboard');
     Route::get('/questions', [AdminController::class, 'questions'])->name('questions');
+    Route::get('/stories', [AdminController::class, 'stories'])->name('stories');
     Route::get('/donations', [AdminController::class, 'donations'])->name('donations');
 
 });

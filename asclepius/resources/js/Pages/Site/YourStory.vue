@@ -38,46 +38,51 @@
                     <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.</p>
 
                 </div>
+                <form @submit.prevent="submit">
+                    <div v-for="question in form.questions" class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
 
-                <div v-for="question in questions" class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                        <label for="about" class="block text-sm font-medium text-gray-700 sm:mt-px pt-2 sm:pt-0"> {{ question.question }} </label>
 
-                    <label for="about" class="block text-sm font-medium text-gray-700 sm:mt-px pt-2 sm:pt-0"> {{ question.question }} </label>
+                        <div class="mt-1 sm:mt-0 sm:col-span-2">
 
-                    <div class="mt-1 sm:mt-0 sm:col-span-2">
+                            <textarea id="about" v-model="question.response" rows="3" class="mb-8 sm:mb-4 max-w-xl ml-auto shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md" required />
 
-                        <textarea id="about" name="about" rows="3" class="mb-8 sm:mb-4 max-w-xl ml-auto shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md" />
+                        </div>
 
                     </div>
 
-                </div>
+                    <div class="flex justify-between sm:border-t sm:border-gray-200 sm:pt-5 ">
 
-                <div class="flex justify-between sm:border-t sm:border-gray-200 sm:pt-5 ">
+                        <div class="flex flex-col w-full sm:w-1/2 mb-8">
+                            <div class="my-2">
+                                <label for="first-name" class="block text-sm font-medium text-gray-900">First name</label>
+                                <div class="mt-1">
+                                    <input type="text" v-model="form.firstName" id="firstName" autocomplete="given-name" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" required/>
+                                </div>
+                            </div>
+                            <div class="my-2">
+                                <label for="last-name" class="block text-sm font-medium text-gray-900">Last name</label>
+                                <div class="mt-1">
+                                    <input type="text" v-model="form.lastName" id="lastName" autocomplete="family-name" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" required/>
+                                </div>
+                            </div>
+                            <div class="my-2">
+                                <label for="email" class="block text-sm font-medium text-gray-900">Email</label>
+                                <div class="mt-1">
+                                    <input id="email" type="text" v-model="form.email" autocomplete="email" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" required/>
+                                </div>
+                            </div>
+                        </div>
 
-                    <div class="flex flex-col w-full sm:w-1/2">
-                        <div>
-                            <label for="first-name" class="block text-sm font-medium text-gray-900">First name</label>
-                            <div class="mt-1">
-                                <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" />
-                            </div>
+                        <div class="flex flex-col items-center m-auto">
+                            <p>Thank you for taking the time to share with us your story.</p>
+                            <button type="submit" class="mt-4 btn btn-primary">Submit Story</button>
                         </div>
-                        <div>
-                            <label for="last-name" class="block text-sm font-medium text-gray-900">Last name</label>
-                            <div class="mt-1">
-                                <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" />
-                            </div>
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-900">Email</label>
-                            <div class="mt-1">
-                                <input id="email" name="email" type="email" autocomplete="email" class="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md" />
-                            </div>
-                        </div>
+
+
+
                     </div>
-
-
-
-                </div>
-
+                </form>
             </div>
 
         </main>
@@ -88,9 +93,10 @@
 </template>
 
 <script>
-import {ref, onMounted} from 'vue';
+import {ref, onMounted, reactive} from 'vue';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
+import { Inertia } from '@inertiajs/inertia'
 
 export default {
     name: "YourStory",
@@ -106,14 +112,28 @@ export default {
 
     setup(props) {
 
-        const questions = ref(props.questions);
+        const form = reactive({
+            questions: props.questions,
+            firstName: null,
+            lastName: null,
+            email: null,
+        })
+
+        // const url = process.env.MIX_APP_URL
+
+        function submit() {
+            Inertia.post('/your-story/submit', form)
+        }
+
+        // const questions = ref(props.questions);
 
         onMounted( () => {
             console.log(questions.value)
         })
 
         return {
-            questions,
+            form,
+            submit,
         }
     }
 }

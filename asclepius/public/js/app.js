@@ -151,6 +151,16 @@ var map = {
 		"/js/vendor",
 		"resources_js_Pages_App_Questions_vue"
 	],
+	"./App/Stories": [
+		"./resources/js/Pages/App/Stories.vue",
+		"/js/vendor",
+		"resources_js_Pages_App_Stories_vue"
+	],
+	"./App/Stories.vue": [
+		"./resources/js/Pages/App/Stories.vue",
+		"/js/vendor",
+		"resources_js_Pages_App_Stories_vue"
+	],
 	"./Components/Footer": [
 		"./resources/js/Pages/Components/Footer.vue",
 		"/js/vendor",

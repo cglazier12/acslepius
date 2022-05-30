@@ -42,7 +42,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @heroicons/vue/outline */ "./node_modules/@heroicons/vue/outline/esm/XIcon.js");
 /* harmony import */ var _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @heroicons/vue/outline */ "./node_modules/@heroicons/vue/outline/esm/HomeIcon.js");
 /* harmony import */ var _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @heroicons/vue/outline */ "./node_modules/@heroicons/vue/outline/esm/UsersIcon.js");
-/* harmony import */ var _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @heroicons/vue/outline */ "./node_modules/@heroicons/vue/outline/esm/FolderIcon.js");
+/* harmony import */ var _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @heroicons/vue/outline */ "./node_modules/@heroicons/vue/outline/esm/NewspaperIcon.js");
+/* harmony import */ var _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @heroicons/vue/outline */ "./node_modules/@heroicons/vue/outline/esm/FolderIcon.js");
 
 
 
@@ -73,10 +74,16 @@ __webpack_require__.r(__webpack_exports__);
       icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_9__["default"],
       current: false
     }, {
+      id: 1,
+      name: 'Stories',
+      href: '/admin/stories',
+      icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_10__["default"],
+      current: false
+    }, {
       id: 2,
       name: 'Donations',
       href: '/admin/donations',
-      icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_10__["default"],
+      icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_11__["default"],
       current: false
     } // { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
     // { name: 'Documents', href: '#', icon: InboxIcon, current: false },
