@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SiteController;
+use App\Http\Controllers\StoryController;
+use App\Http\Controllers\TopicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,7 +45,20 @@ Route::prefix('/admin')->name('admin.')->middleware(['auth'])->group(function ()
 
     Route::get('/', [AdminController::class, 'dashboard'])->name('dashboard');
     Route::get('/questions', [AdminController::class, 'questions'])->name('questions');
-    Route::get('/stories', [AdminController::class, 'stories'])->name('stories');
+
+    Route::prefix('/topics')->name('topics.')->middleware(['auth'])->group(function () {
+        Route::get('/', [TopicController::class, 'index'])->name('index');
+        Route::get('/create', [TopicController::class, 'create'])->name('create');
+        Route::get('/{slug}', [TopicController::class, 'edit'])->name('edit');
+    });
+
+    Route::prefix('/stories')->name('stories.')->middleware(['auth'])->group(function () {
+        Route::get('/', [StoryController::class, 'index'])->name('index');
+        Route::get('/create', [StoryController::class, 'create'])->name('create');
+        Route::post('/store', [StoryController::class, 'store'])->name('store');
+    });
+
+
     Route::get('/donations', [AdminController::class, 'donations'])->name('donations');
 
 });

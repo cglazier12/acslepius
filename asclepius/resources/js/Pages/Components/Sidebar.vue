@@ -129,8 +129,9 @@ export default {
         const navigation = ref([
             { id: 0, name: 'Dashboard', href: '/admin', icon: HomeIcon, current: false },
             { id: 1, name: 'Questions', href: '/admin/questions', icon: UsersIcon, current: false },
-            { id: 1, name: 'Stories', href: '/admin/stories', icon: NewspaperIcon, current: false },
-            { id: 2, name: 'Donations', href: '/admin/donations', icon: FolderIcon, current: false },
+            { id: 2, name: 'Topics', href: '/admin/topics', icon: UsersIcon, current: false },
+            { id: 3, name: 'Stories', href: '/admin/stories', icon: NewspaperIcon, current: false },
+            { id: 4, name: 'Donations', href: '/admin/donations', icon: FolderIcon, current: false },
             // { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
             // { name: 'Documents', href: '#', icon: InboxIcon, current: false },
             // { name: 'Reports', href: '#', icon: ChartBarIcon, current: false },

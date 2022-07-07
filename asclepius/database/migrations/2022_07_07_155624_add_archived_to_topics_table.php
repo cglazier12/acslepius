@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('story_questions', function (Blueprint $table) {
-            $table->integer('order')->after('question');
+        Schema::table('topics', function (Blueprint $table) {
+            $table->boolean('archived')->after('slug')->default(0);
         });
     }
 
@@ -25,7 +25,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('story_questions', function (Blueprint $table) {
+        Schema::table('topics', function (Blueprint $table) {
             //
         });
     }

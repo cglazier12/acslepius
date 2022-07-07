@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\StoryController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +22,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::prefix('/questions')->name('admin.')->group(function () {
 
+    Route::post('/add', [QuestionController::class, 'addQuestion']);
     Route::post('/submit', [QuestionController::class, 'submit']);
+
+});
+
+Route::prefix('/stories')->name('stories.')->group(function () {
+
+    Route::post('/create', [StoryController::class, 'adminStore']);
 
 });

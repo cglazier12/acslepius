@@ -53,13 +53,19 @@ __webpack_require__.r(__webpack_exports__);
       icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_9__["default"],
       current: false
     }, {
-      id: 1,
+      id: 2,
+      name: 'Topics',
+      href: '/admin/topics',
+      icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_9__["default"],
+      current: false
+    }, {
+      id: 3,
       name: 'Stories',
       href: '/admin/stories',
       icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_10__["default"],
       current: false
     }, {
-      id: 2,
+      id: 4,
       name: 'Donations',
       href: '/admin/donations',
       icon: _heroicons_vue_outline__WEBPACK_IMPORTED_MODULE_11__["default"],

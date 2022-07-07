@@ -213,6 +213,7 @@ __webpack_require__.r(__webpack_exports__);
     Footer: _Components_Footer__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   setup: function setup(props) {
+    // const money = ref(0.00);
     var monthly = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(0.00);
     var features = [{
       name: 'List view',
@@ -235,7 +236,7 @@ __webpack_require__.r(__webpack_exports__);
     return {
       features: features,
       checklist: checklist,
-      money: money,
+      // money,
       monthly: monthly
     };
   }
@@ -770,7 +771,7 @@ var _hoisted_1 = {
   "class": "bg-white"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"relative\"><!--            &lt;div class=&quot;absolute inset-x-0 bottom-0 h-1/2 bg-gray-100&quot; /&gt;--><div class=\"max-w-7xl mx-auto sm:px-6 lg:px-8\"><div class=\"relative shadow-xl sm:rounded-2xl sm:overflow-hidden\"><div class=\"absolute inset-0\"><img class=\"h-full w-full object-cover\" src=\"" + _assets_images_hero_jpg__WEBPACK_IMPORTED_MODULE_1__["default"] + "\" alt=\"People working on laptops\"><div class=\"absolute inset-0 bg-gradient-to-b from-gray-500 to-transparent mix-blend-multiply\"></div></div><div class=\"relative px-4 py-12 sm:px-6 sm:py-16 lg:py-24 lg:px-8\"><h1 class=\"text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl\"><span class=\"block text-white\">Take control of your</span><span class=\"block text-indigo-200\">customer support</span></h1><p class=\"mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl\">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p><div class=\"mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center\"><div class=\"space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5\"><a href=\"#\" class=\"btn btn-secondary\"> Get started </a><a href=\"#\" class=\"btn btn-primary\"> Live demo </a></div></div></div></div></div></div>", 1);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"relative\"><!--            &lt;div class=&quot;absolute inset-x-0 bottom-0 h-1/2 bg-gray-100&quot; /&gt; --><div class=\"max-w-7xl mx-auto sm:px-6 lg:px-8\"><div class=\"relative shadow-xl sm:rounded-2xl sm:overflow-hidden\"><div class=\"absolute inset-0\"><img class=\"h-full w-full object-cover\" src=\"" + _assets_images_hero_jpg__WEBPACK_IMPORTED_MODULE_1__["default"] + "\" alt=\"People working on laptops\"><div class=\"absolute inset-0 bg-gradient-to-b from-gray-500 to-transparent mix-blend-multiply\"></div></div><div class=\"relative px-4 py-12 sm:px-6 sm:py-16 lg:py-24 lg:px-8\"><h1 class=\"text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl\"><span class=\"block text-white\">Take control of your</span><span class=\"block text-indigo-200\">customer support</span></h1><p class=\"mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl\">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p><div class=\"mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center\"><div class=\"space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5\"><a href=\"#\" class=\"btn btn-secondary\"> Get started </a><a href=\"#\" class=\"btn btn-primary\"> Live demo </a></div></div></div></div></div></div>", 1);
 
 var _hoisted_3 = {
   "class": "relative bg-white mt-12"
@@ -884,18 +885,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     )]);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    Recurring Donation section"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_hoisted_17, _hoisted_18, _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [_hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", (0,vue__WEBPACK_IMPORTED_MODULE_0__.mergeProps)({
+  ))])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    Recurring Donation section"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_hoisted_17, _hoisted_18, _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [_hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
       return $setup.monthly = $event;
-    })
-  }, $setup.money, {
+    }),
     name: "price",
     id: "price",
     "class": "input pl-8",
     "aria-describedby": "price-currency"
-  }), null, 16
-  /* FULL_PROPS */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelDynamic, $setup.monthly, void 0, {
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.monthly, void 0, {
     lazy: true
   }]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    One Time Donation section"), _hoisted_22, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                <p class=\"relative grid grid-cols-2\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <span class=\"flex flex-col text-center\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <span class=\"text-5xl font-extrabold text-white tracking-tight\">$99</span>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <span class=\"mt-2 text-base font-medium text-indigo-200\">Setup fee</span>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <span class=\"sr-only\">plus</span>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </span>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <span class=\"pointer-events-none absolute h-12 w-full flex items-center justify-center\" aria-hidden=\"true\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <PlusIcon class=\"h-6 w-6 text-indigo-300\" aria-hidden=\"true\" />"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </span>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    <span>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        <span class=\"flex flex-col text-center\">"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <span class=\"text-5xl font-extrabold text-white tracking-tight\">$4</span>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                            <span class=\"mt-2 text-base font-medium text-indigo-200\">Per month</span>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                        </span>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                    </span>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                                </p>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("&lt;!&ndash;                            <ul role=\"list\" class=\"rounded overflow-hidden grid gap-2 sm:grid-cols-2\">&ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("&lt;!&ndash;                                <li v-for=\"item in checklist\" :key=\"item\" class=\"bg-indigo-800 bg-opacity-50 py-4 px-4 flex items-center space-x-3 text-base text-white\">&ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("&lt;!&ndash;                                    <CheckIcon class=\"h-6 w-6 text-indigo-300\" aria-hidden=\"true\" />&ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("&lt;!&ndash;                                    <span>{{ item }}</span>&ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("&lt;!&ndash;                                </li>&ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("&lt;!&ndash;                            </ul>&ndash;&gt;"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <a href=\"#\" class=\"bg-white border border-transparent rounded-md w-full px-8 py-4 flex items-center justify-center text-lg leading-6 font-medium text-indigo-600 hover:bg-indigo-50 md:px-10\"> Get started today </a>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("                            <a href=\"#\" class=\"block text-center text-base font-medium text-indigo-200 hover:text-white\"> Try Workflow Lite for free </a>")])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)]);
 }

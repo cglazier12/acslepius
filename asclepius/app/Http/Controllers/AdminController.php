@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Story;
+use App\Models\Topic;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\StoryQuestion;
@@ -18,32 +19,22 @@ class AdminController extends Controller
 
     public function questions()
     {
+        // get all questions,
+        $questions = StoryQuestion::all();
 
-        $questions = StoryQuestion::orderBy('order', 'asc')->where('active', 1)->get();
+        // get all topics
+        $topics = Topic::all();
 
         foreach ($questions as $question) {
 
+            // the label for each question will be the original question, so they can compare edits before saving
             $question->oldQuestion = $question->question;
 
         }
 
-        $questions = $questions->toArray();
-
-        return Inertia::render('App/Questions', ['questions' => $questions]);
+        return Inertia::render('App/Questions', ['questions' => $questions, 'topics' => $topics]);
     }
 
-    public function stories()
-    {
-
-        $stories = Story::all();
-
-        foreach ($stories as $story) {
-            $story->submitted = date('F j, Y', strtotime($story->created_at));
-        }
-
-        return Inertia::render('App/Stories', ['stories' => $stories]);
-
-    }
 
     public function donations()
     {

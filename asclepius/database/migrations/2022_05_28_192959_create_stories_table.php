@@ -15,10 +15,14 @@ return new class extends Migration
     {
         Schema::create('stories', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email');
-            $table->string('phone')->nullable();
-            $table->json('story');
+            $table->foreignId('customer_id');
+            $table->foreignId('topic_id')->nullable();
+            $table->foreignId('story_question_id')->nullable();
+            $table->string('title')->nullable();
+            $table->longText('synopsis')->nullable();
+            $table->longText('story')->nullable();
+            $table->string('img')->nullable();
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }

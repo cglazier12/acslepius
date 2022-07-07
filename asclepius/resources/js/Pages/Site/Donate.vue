@@ -4,7 +4,7 @@
         <main>
 
             <div class="relative">
-                <!--            <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />-->
+                <!--            <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" /> -->
                 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
                         <div class="absolute inset-0">
@@ -69,7 +69,7 @@
                                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                                 <span class="text-gray-500 sm:text-lg"> $ </span>
                                             </div>
-                                            <input v-model.lazy="monthly" v-bind="money" name="price" id="price" class="input pl-8" aria-describedby="price-currency" />
+                                            <input v-model.lazy="monthly" name="price" id="price" class="input pl-8" aria-describedby="price-currency" />
                                         </div>
 
 
@@ -140,6 +140,7 @@ export default {
 
     setup(props) {
 
+        // const money = ref(0.00);
         const monthly = ref(0.00);
 
         const features = [
@@ -180,7 +181,7 @@ export default {
         return {
             features,
             checklist,
-            money,
+            // money,
             monthly
         }
     }

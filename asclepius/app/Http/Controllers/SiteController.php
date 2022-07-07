@@ -24,7 +24,7 @@ class SiteController extends Controller
     public function yourStory()
     {
 
-        $questions = StoryQuestion::where('active', 1)->get();
+        $questions = StoryQuestion::all();
 
         foreach($questions as $question) {
             $question->response = "";
@@ -49,7 +49,8 @@ class SiteController extends Controller
 
             // make a new customer
             $customer = new Customer();
-            $customer->name = $request->firstName . ' ' . $request->lastName;
+            $customer->first_name = $request->firstName;
+            $customer->last_name = $request->last_name;
             $customer->email = $validated['email'];
             $customer->notify = 1;
             $customer->story = 1;
@@ -64,11 +65,13 @@ class SiteController extends Controller
 
         }
 
+
         // create a new story
         $story = new Story();
         $story->customer_id = $customer->id;
-        $story->name = $request->firstName . ' ' . $request->lastName;
-        $story->email = $validated['email'];
+        $story->topic_id = $request->question['topic_id'];
+        $story->story_question_id = $request->question['id'];
+        $story->story = $request->story;
         $story->story = json_encode($request->questions);
         $story->save();
 

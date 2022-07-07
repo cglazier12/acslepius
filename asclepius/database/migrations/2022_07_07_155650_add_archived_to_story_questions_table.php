@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('stories', function (Blueprint $table) {
-            $table->foreignId('customer_id')->after('id');
+        Schema::table('story_questions', function (Blueprint $table) {
+            $table->boolean('archived')->after('question')->default(0);
         });
     }
 
@@ -25,7 +25,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('stories', function (Blueprint $table) {
+        Schema::table('story_questions', function (Blueprint $table) {
             //
         });
     }

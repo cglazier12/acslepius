@@ -14,6 +14,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
 /* harmony import */ var _inertiajs_progress__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/progress */ "./node_modules/@inertiajs/progress/dist/index.js");
 /* harmony import */ var _ziggy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ziggy */ "./resources/js/ziggy.js");
+/* harmony import */ var mitt__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! mitt */ "./node_modules/mitt/dist/mitt.mjs");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -24,7 +25,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
  // import { ZiggyVue } from "./ziggy";
 
+ // emitter package
 
+
+var emitter = (0,mitt__WEBPACK_IMPORTED_MODULE_5__["default"])();
 _inertiajs_progress__WEBPACK_IMPORTED_MODULE_3__.InertiaProgress.init();
 (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_2__.createInertiaApp)({
   resolve: function () {
@@ -62,7 +66,7 @@ _inertiajs_progress__WEBPACK_IMPORTED_MODULE_3__.InertiaProgress.init();
       render: function render() {
         return (0,vue__WEBPACK_IMPORTED_MODULE_1__.h)(App, props);
       }
-    }).use(plugin).use(_ziggy__WEBPACK_IMPORTED_MODULE_4__.Ziggy).component("Link", _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_2__.Link).component("Head", _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_2__.Head).mixin({
+    }).use(plugin).use(_ziggy__WEBPACK_IMPORTED_MODULE_4__.Ziggy).provide('emitter', emitter).component("Link", _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_2__.Link).component("Head", _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_2__.Head).mixin({
       methods: {
         route: route
       }
@@ -151,15 +155,55 @@ var map = {
 		"/js/vendor",
 		"resources_js_Pages_App_Questions_vue"
 	],
-	"./App/Stories": [
-		"./resources/js/Pages/App/Stories.vue",
+	"./App/Stories/Create": [
+		"./resources/js/Pages/App/Stories/Create.vue",
 		"/js/vendor",
-		"resources_js_Pages_App_Stories_vue"
+		"resources_js_Pages_App_Stories_Create_vue"
 	],
-	"./App/Stories.vue": [
-		"./resources/js/Pages/App/Stories.vue",
+	"./App/Stories/Create.vue": [
+		"./resources/js/Pages/App/Stories/Create.vue",
 		"/js/vendor",
-		"resources_js_Pages_App_Stories_vue"
+		"resources_js_Pages_App_Stories_Create_vue"
+	],
+	"./App/Stories/Index": [
+		"./resources/js/Pages/App/Stories/Index.vue",
+		"/js/vendor",
+		"resources_js_Pages_App_Stories_Index_vue"
+	],
+	"./App/Stories/Index.vue": [
+		"./resources/js/Pages/App/Stories/Index.vue",
+		"/js/vendor",
+		"resources_js_Pages_App_Stories_Index_vue"
+	],
+	"./App/Topics/Create": [
+		"./resources/js/Pages/App/Topics/Create.vue",
+		"/js/vendor",
+		"resources_js_Pages_App_Topics_Create_vue"
+	],
+	"./App/Topics/Create.vue": [
+		"./resources/js/Pages/App/Topics/Create.vue",
+		"/js/vendor",
+		"resources_js_Pages_App_Topics_Create_vue"
+	],
+	"./App/Topics/Edit": [
+		"./resources/js/Pages/App/Topics/Edit.vue",
+		"/js/vendor",
+		"resources_js_Pages_App_Topics_Edit_vue"
+	],
+	"./App/Topics/Edit.vue": [
+		"./resources/js/Pages/App/Topics/Edit.vue",
+		"/js/vendor",
+		"resources_js_Pages_App_Topics_Edit_vue"
+	],
+	"./App/Topics/Index": [
+		"./resources/js/Pages/App/Topics/Index.vue",
+		"/js/vendor",
+		"resources_js_Pages_App_Topics_Index_vue"
+	],
+	"./App/Topics/Index.vue": [
+		"./resources/js/Pages/App/Topics/Index.vue",
+		"/js/vendor",
+		"resources_js_Pages_App_Topics_Index_vue"
 	],
 	"./Components/Footer": [
 		"./resources/js/Pages/Components/Footer.vue",
@@ -181,6 +225,16 @@ var map = {
 		"/js/vendor",
 		"resources_js_Pages_Components_Navbar_vue"
 	],
+	"./Components/QuestionDropdown": [
+		"./resources/js/Pages/Components/QuestionDropdown.vue",
+		"/js/vendor",
+		"resources_js_Pages_Components_QuestionDropdown_vue"
+	],
+	"./Components/QuestionDropdown.vue": [
+		"./resources/js/Pages/Components/QuestionDropdown.vue",
+		"/js/vendor",
+		"resources_js_Pages_Components_QuestionDropdown_vue"
+	],
 	"./Components/Sidebar": [
 		"./resources/js/Pages/Components/Sidebar.vue",
 		"/js/vendor",
@@ -190,6 +244,26 @@ var map = {
 		"./resources/js/Pages/Components/Sidebar.vue",
 		"/js/vendor",
 		"resources_js_Pages_Components_Sidebar_vue"
+	],
+	"./Components/StoryTextBox": [
+		"./resources/js/Pages/Components/StoryTextBox.vue",
+		"/js/vendor",
+		"resources_js_Pages_Components_StoryTextBox_vue"
+	],
+	"./Components/StoryTextBox.vue": [
+		"./resources/js/Pages/Components/StoryTextBox.vue",
+		"/js/vendor",
+		"resources_js_Pages_Components_StoryTextBox_vue"
+	],
+	"./Components/TopicDropdown": [
+		"./resources/js/Pages/Components/TopicDropdown.vue",
+		"/js/vendor",
+		"resources_js_Pages_Components_TopicDropdown_vue"
+	],
+	"./Components/TopicDropdown.vue": [
+		"./resources/js/Pages/Components/TopicDropdown.vue",
+		"/js/vendor",
+		"resources_js_Pages_Components_TopicDropdown_vue"
 	],
 	"./Site/About": [
 		"./resources/js/Pages/Site/About.vue",

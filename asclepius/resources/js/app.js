@@ -6,6 +6,10 @@ import { InertiaProgress } from "@inertiajs/progress";
 // import { ZiggyVue } from "./ziggy";
 import { Ziggy } from "./ziggy";
 
+// emitter package
+import mitt from 'mitt';
+const emitter = mitt();
+
 InertiaProgress.init();
 
 createInertiaApp({
@@ -16,6 +20,7 @@ createInertiaApp({
         createApp({ render: () => h(App, props) })
         .use(plugin)
         .use(Ziggy)
+        .provide('emitter', emitter)
         .component("Link", Link)
         .component("Head", Head)
         .mixin({ methods: { route } })
